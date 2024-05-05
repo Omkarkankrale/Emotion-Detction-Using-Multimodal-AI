@@ -14,7 +14,8 @@ from keras.models import model_from_json
 from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
-pipe_lr = joblib.load(open("E://07_projects//04_AI&ML projects//01_Emotion_Detection_using_Multimodal_AI//Emotion-Detection-Using-Multi-Modal-AI//Text_Modal//text_emotion.pkl", "rb"))
+pipe_lr = joblib.load(open("Text_Modal/text_emotion.pkl", "rb"))
+
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", 
                     "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
