@@ -1,6 +1,6 @@
 # AWARDS
 <p align="center">
-<img src="https://github.com/MSDEOKAR/Emotion-Detection-Using-Multi-Modal-AI/assets/109652802/fa274120-1f52-472e-9733-5f2f2ebb5d97" alt="Certificate" width="900" height="600" ali>
+
 </p>
 
 
