@@ -13,7 +13,7 @@ from keras.models import model_from_json
 from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
-pipe_lr = joblib.load(open("E:\\python\\Emotion-Detection-Using-Multi-Modal-AI-main\\Text_Modal\\text_emotion.pkl", "rb"))
+pipe_lr = joblib.load(open("E://07_projects//04_AI&ML projects//01_Emotion_Detection_using_Multimodal_AI//Emotion-Detection-Using-Multi-Modal-AI//Text_Modal//text_emotion.pkl", "rb"))
 
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", 
                     "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
@@ -23,17 +23,17 @@ emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3:
 "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 
 
-json_file = open('model/emotion_model.json', 'r')
+json_file = open('E://07_projects//04_AI&ML projects//01_Emotion_Detection_using_Multimodal_AI//Emotion-Detection-Using-Multi-Modal-AI//emotion_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 classifier = model_from_json(loaded_model_json)
 
 # load weights into new model
-classifier.load_weights("model/emotion_model.h5")
+classifier.load_weights("emotion_model.h5")
 
 #load face
 try:
-    face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 except Exception:
     st.write("Error loading cascade classifiers")
 
