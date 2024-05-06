@@ -25,7 +25,7 @@ emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3:
 "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 
 
-json_file = open('E://07_projects//04_AI&ML projects//01_Emotion_Detection_using_Multimodal_AI//Emotion-Detection-Using-Multi-Modal-AI//emotion_model.json', 'r')
+json_file = open('emotion_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 classifier = model_from_json(loaded_model_json)
